@@ -39,6 +39,14 @@ function calculateTotalCost(price, quantity, taxRate) {
 }
 calculateTotalCost(10, 30, 50)
 
+function calculateTotalCost(price, quantity, taxRate) {
+    if(!price || !quantity || !taxRate) {
+        return ("Invalid input.")
+    }
+    return totalCost = (price * quantity) * (1 + taxRate)
+}
+calculateTotalCost(10, 30, 50)
+
 
 // Task 3: Functions with Conditional Logic
 
