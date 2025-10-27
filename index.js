@@ -35,7 +35,7 @@ function calculateTotalCost(price, quantity, taxRate) {
 }
 
 function calculateTotalCost(price, quantity, taxRate) {
-    return totalCost = (price * quantity) * (1 + taxRate)
+    return (price * quantity) * (1 + taxRate / 100)
 }
 calculateTotalCost(10, 30, 50)
 
@@ -43,7 +43,7 @@ function calculateTotalCost(price, quantity, taxRate) {
     if(!price || !quantity || !taxRate) {
         return ("Invalid input.")
     }
-    return totalCost = (price * quantity) * (1 + taxRate)
+    return (price * quantity) * (1 + taxRate / 1--)
 }
 calculateTotalCost(30, 50)
 
@@ -66,3 +66,14 @@ checkEligibility(25, false)
 checkEligibility(16, false)
 
 // Task 4: Refactoring for Reusability
+
+function calculateTotalCost(price, quantity, taxRate, discount) {
+    if(price == null || quantity == null || taxRate == null) {
+        return ("Invalid input.")
+    }
+    else if(discount !== undefined) {
+        return (price * quantity) * (1 + taxRate / 100) - discount
+    }
+    return (price * quantity) * (1 + taxRate / 100)
+}
+calculateTotalCost(30, 50, 10, 20)
