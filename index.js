@@ -45,9 +45,24 @@ function calculateTotalCost(price, quantity, taxRate) {
     }
     return totalCost = (price * quantity) * (1 + taxRate)
 }
-calculateTotalCost(10, 30, 50)
+calculateTotalCost(30, 50)
 
 
 // Task 3: Functions with Conditional Logic
+
+function checkEligibility(age, isEmployed = true) {
+    if(age > 18 && isEmployed) {
+        return "Eligible"
+    }
+    else if(age > 18 && !isEmployed) {
+        return "Conditionally Eligible"
+    }
+    else  {
+        return "Not Eligible"
+    }
+}
+checkEligibility(25, true)
+checkEligibility(25, false)
+checkEligibility(16, false)
 
 // Task 4: Refactoring for Reusability
