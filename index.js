@@ -6,6 +6,15 @@ function formatFullName(lastName, firstName) {
 
 formatFullName("Reid", "Shakira")
 
+function formatFullNameCapitalize(firstName, lastName) {
+    const capitalFirstName = firstName[0].toUpperCase() + firstName.substring(1);
+    const capitalLastName = lastName[0].toUpperCase() + lastName.substring(1);
+    return capitalFirstName + " " + capitalLastName
+}
+
+formatFullNameCapitalize("shakira", "reid")
+
+
 // Task 2: Mathematical Operations with Multiple Parameters
 
 
